@@ -12,7 +12,7 @@ function generateRandomNumber(max, min) {
 const squad = [
   {
     name: "squadra1",
-    pointsScored: zero,
+    pointsScored: 0,
     foulsSuffered: 0,
   },
   {
@@ -31,3 +31,11 @@ const squad = [
     foulsSuffered: 0,
   },
 ];
+
+for (let i = 0; i < squad.length; i++) {
+  const currentSquad = squad[i];
+  currentSquad.pointsScored = generateRandomNumber(20, 1);
+  currentSquad.foulsSuffered = generateRandomNumber(20, 1);
+}
+
+console.log(squad);
