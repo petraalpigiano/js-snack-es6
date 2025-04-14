@@ -3,12 +3,7 @@
 // Nome sarà l'unica proprietà da compilare, le altre saranno tutte settate a 0.
 // Generare numeri random al posto degli 0 nelle proprietà "punti" fatti e "falli subiti".
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
-
-function generateRandomNumber(max, min) {
-  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-  return randomNumber;
-}
-
+const nameFoulsSquad = [];
 const squad = [
   {
     name: "squadra1",
@@ -32,6 +27,11 @@ const squad = [
   },
 ];
 
+function generateRandomNumber(max, min) {
+  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  return randomNumber;
+}
+
 for (let i = 0; i < squad.length; i++) {
   const currentSquad = squad[i];
   currentSquad.pointsScored = generateRandomNumber(20, 1);
@@ -39,3 +39,9 @@ for (let i = 0; i < squad.length; i++) {
 }
 
 console.log(squad);
+
+for (const currentSquad of squad) {
+  nameFoulsSquad.push(currentSquad.name);
+  nameFoulsSquad.push(currentSquad.foulsSuffered);
+}
+console.log(nameFoulsSquad);
