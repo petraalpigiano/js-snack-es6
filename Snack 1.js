@@ -4,19 +4,26 @@
 
 const bike = [
   {
-    name: bici1,
+    name: "bike1",
     weight: 300,
   },
   {
-    name: bici2,
+    name: "bike2",
     weight: 274,
   },
   {
-    name: bici3,
+    name: "bike3",
     weight: 140,
   },
   {
-    name: bici4,
+    name: "bike4",
     weight: 463,
   },
 ];
+
+console.log(bike[2].weight);
+
+for (let i = 0; i < 1; i++) {
+  const currentBike = bike[2];
+  console.log(currentBike.weight);
+}
