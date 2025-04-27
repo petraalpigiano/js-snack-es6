@@ -44,4 +44,4 @@ for (const currentSquad of squad) {
   nameFoulsSquad.push(currentSquad.name);
   nameFoulsSquad.push(currentSquad.foulsSuffered);
 }
-console.log(nameFoulsSquad);
+console.table(nameFoulsSquad);
